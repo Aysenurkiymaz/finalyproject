@@ -13,7 +13,6 @@ const Event = sequelize.define('Event', {
     }
 });
 
-// Define association with Guest model
 Event.hasMany(Guest, { as: 'guests' });
 
 module.exports = Event;
