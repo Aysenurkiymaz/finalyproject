@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Event Listing
+  body
+    h1 Event Listing
+    each event in events
+      .event
+        h2 #{event.name}
+        p Date: #{event.date}
+        h3 Guest List
+        ul
+          each guest in event.guestList
+            li #{guest}
