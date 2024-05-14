@@ -16,3 +16,4 @@ const Guest = sequelize.define('Guest', {
 });
 
 module.exports = Guest;
+
