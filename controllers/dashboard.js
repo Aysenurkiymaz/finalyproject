@@ -9,5 +9,5 @@ module.exports = {
     createEvent: (req, res) => {
         res.render('event');
     },
-    
+
 }
