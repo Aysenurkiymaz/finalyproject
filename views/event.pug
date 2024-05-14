@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Create Event
+  body
+    h1 Create Event
+    form(action="/create-event", method="POST")
+      label(for="eventName") Event Name:
+      input(type="text", id="eventName", name="eventName", required)
+      br
+      label(for="eventDate") Event Date:
+      input(type="date", id="eventDate", name="eventDate", required)
+      br
+      label(for="guestList") Guest List (comma-separated):
+      input(type="text", id="guestList", name="guestList", required)
+      br
+      button(type="submit") Create Event
