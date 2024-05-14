@@ -16,5 +16,7 @@ Uruchom aplikację:
 npm start
 or 
 yarn start
-      Odwiedź localhost:8080z przeglądarki internetowej.
+      Odwiedź localhost:8080 z przeglądarki internetowej.
+      http://localhost:8080/event
+      http://localhost:8080/
 
