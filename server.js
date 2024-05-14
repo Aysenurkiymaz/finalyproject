@@ -1,5 +1,17 @@
-error: failed to push some refs to 'https://github.com/Aysenurkiymaz/first_mvc_project.git'
-hint: Updates were rejected because a pushed branch tip is behind its remote
-hint: counterpart.If you want to integrate the remote changes, use 'git pull'
-hint: before pushing again.
-    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+const express = require('express');
+const dashboardRoutes = require('./routes/dashboard');
+const db = require('./db.js');
+
+const app = express();
+const PORT = 8080;
+
+app.listen(PORT, () => console.log('Server is running on port: ' + PORT));
+
+app.use(express.urlencoded({extended: false}));
+app.set('view engine', 'pug');
+app.use('/', dashboardRoutes);
+
+db.sync({force: false})
+    .then(() => {
+        // app.listen(PORT, console.log('Server is running on port: ' + PORT));
+    });
