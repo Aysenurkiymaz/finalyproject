@@ -5,14 +5,14 @@
 2. Użyte technologie
    Przykładowa aplikacja internetowa Node.js MVC stworzona przy użyciu Express, Pug i Sequelize.js (SQLite)
     W projekcie wykorzystane zostaną różne technologie, język programowania backendu (Node.js z Server) oraz system zarządzania bazami danych (DB).
-   
-  3.Sklonuj lub pobierz repozytorium. 
-  
-Zainstaluj zależności:
+
+ 3.Instalacja i uruchomienie aplikacji:
+   Sklonuj lub pobierz repozytorium.  
+   Zainstaluj zależności:
 npm install
 or
 yarn install
-Uruchom aplikację:
+   Uruchom aplikację:
 npm start
 or 
 yarn start
