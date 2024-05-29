@@ -4,14 +4,31 @@ html
     title Create Event
   body
     h1 Create Event
-    form(action="/create-event", method="POST")
+    form(action="/event", method="POST")
       label(for="eventName") Event Name:
-      input(type="text", id="eventName", name="eventName", required)
+      input(type="text", id="eventName", name="name", required)
+      br
+      label(for="organization") Organization Name:
+      input(type="text", id="organization", name="organization", required)
       br
       label(for="eventDate") Event Date:
-      input(type="date", id="eventDate", name="eventDate", required)
+      input(type="date", id="eventDate", name="date", required)
       br
       label(for="guestList") Guest List (comma-separated):
-      input(type="text", id="guestList", name="guestList", required)
+      div#guest-list
+          input(type="text", id="guestList", name="guestList", required)
+          br
+
+         
+      button#add-button(type="button") Add
       br
       button(type="submit") Create Event
+
+    script(type='text/javascript').
+        document.querySelector("#add-button").onclick = function(){
+             var guestListDiv = document.querySelector("#guest-list");
+             var guestInput = document.createElement('input');
+             guestInput.name = 'guestList';
+             guestListDiv.appendChild(guestInput);
+             guestListDiv.appendChild(document.createElement('br'));
+        };
